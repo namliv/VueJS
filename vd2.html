@@ -25,6 +25,20 @@
 	</ol>
 </div>
 
+<!-- app5 -->
+<div id="app5">
+	<p>{{message}}</p>
+	<button v-on:click="reverseMessage">Phuong Nam</button>
+</div>
+
+<!-- app6 -->
+<div id="app6">
+	<p>{{ message }}</p>
+	<input v-model="message" />
+</div>
+
+
+
 <!-- script -->
 <script type="text/javascript">
 	var app2 = new Vue({
@@ -51,6 +65,27 @@
                {text: 'Learn Vue'},
                {text: 'Buidding code'}  
 			]
+		}
+	})
+
+	//dao nguoc text
+	var app5 = new Vue({
+		el: '#app5',
+		data: {
+			message: 'Hello VueJs'
+		},
+		methods: {
+			reverseMessage : function(){
+				this.message = this.message.split('').reverse().join('')
+			}
+		}
+	})
+
+	//tuong tac vs input
+	var app6 = new Vue({
+		el: '#app6',
+		data: {
+			message: 'Hello Vue'
 		}
 	})
 </script>
