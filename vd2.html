@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue 2</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app2">
+	<span v-bind:title="message">
+		Abc
+	</span>
+</div>
+
+<!-- app3 -->
+<div id="app3">
+	<p v-if="seen">Now you see me</p>
+</div>
+
+<!-- app4  -->
+<div id="app4">
+	<ol>
+		<li v-for="todo in todos">
+			{{ todo.text }}
+		</li>
+	</ol>
+</div>
+
+<!-- script -->
+<script type="text/javascript">
+	var app2 = new Vue({
+		el: '#app2',
+		data:{
+			message: 'Phuong Nam'
+		}
+	})
+    
+    // an hien 1 phan tu html co id #app3
+	var app3 = new Vue({
+		el: '#app3',
+		data:{
+			seen: true
+		}
+	})
+
+	// duyet cac phan tu mang
+	var app4 = new Vue({
+		el: '#app4',
+		data:{
+			todos: [
+               {text: 'Learn JS'},
+               {text: 'Learn Vue'},
+               {text: 'Buidding code'}  
+			]
+		}
+	})
+</script>
+</body>
+</html>
