@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue 5</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<h1 v-once>{{title}}</h1>
+		<p>{{ sayHello() }}-<a v-bind:href="blogUrl">Visit my blog</a></p>
+	</div>
+	<script type="text/javascript">
+		new Vue({
+			el: '#app',
+			data: {
+				title: 'Hello Viet Nam',
+				blogUrl : 'https://www.facebook.com/'
+			},
+			methods: {
+				sayHello(){
+					this.title = 'Hello';
+					return this.title;
+				}
+			}
+		})
+	</script>
+</body>
+</script>
+</body>
+</html>
