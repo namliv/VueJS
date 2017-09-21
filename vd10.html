@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue 5</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<p v-on:mousemove="capnhatToaDo">ToaDo: {{x}} / {{y}}</p>
+	</div>
+	<script type="text/javascript">
+		new Vue({
+			el: '#app',
+			data: {
+				x : 0,
+				y : 0
+			},
+			methods:{
+				capnhatToaDo(event){
+                    this.x = event.clientX;
+                    this.y = event.clientY;
+				}
+			}
+		})
+	</script>
+</body>
+</script>
+</body>
+</html>
