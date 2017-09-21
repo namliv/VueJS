@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue 5</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+        <button v-on:click="tang">Click</button>
+        <p>{{ counter }}</p>
+	</div>
+	<script type="text/javascript">
+		new Vue({
+			el: '#app',
+			data: {
+				counter : 0
+			},
+			methods:{
+				tang(){
+					this.counter++;
+				}
+			}
+		})
+	</script>
+</body>
+</script>
+</body>
+</html>
