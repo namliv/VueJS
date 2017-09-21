@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+	{{ name.split(' ')[2] }}
+</div>
+<script type="text/javascript">
+	new Vue({
+		el: '#app',
+        data: {
+        	age: '21',
+        	name: 'Ng Phuong Nam'
+        }
+	})
+</script>
+</body>
+</html>
